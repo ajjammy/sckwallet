@@ -10,7 +10,7 @@ using System;
 namespace hello.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    [Migration("20171220042357_InitialCreate")]
+    [Migration("20171220054451_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
