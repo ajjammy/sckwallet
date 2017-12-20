@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
 
 namespace hello.Controllers
 {
@@ -26,12 +27,13 @@ namespace hello.Controllers
 
         // POST api/blogs
         [HttpPost]
-		public IActionResult Post([FromBody]string url)
+		public IActionResult PostOne([FromBody]Blog body)
 		{
             using (var db = new BloggingContext())
             {
-			    db.Blogs.Add(new Blog { Url = url });
-                return new OkObjectResult(url);
+			    db.Blogs.Add(new Blog { Url = body.Url });
+                var count = db.SaveChanges();
+                return new OkObjectResult(string.Format("{0} records saved to database", count));
             }
 		}
     }
