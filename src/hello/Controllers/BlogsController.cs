@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 
 namespace hello.Controllers
 {
@@ -32,6 +31,20 @@ namespace hello.Controllers
             using (var db = new BloggingContext())
             {
 			    db.Blogs.Add(new Blog { Url = body.Url });
+                var count = db.SaveChanges();
+                return new OkObjectResult(string.Format("{0} records saved to database", count));
+            }
+		}
+
+        // PUT api/blogs/1
+		[HttpPut("{id}")]
+		public IActionResult PutOne(int id, [FromBody]Blog body)
+		{
+            using (var db = new BloggingContext())
+            {
+                var blog = db.Blogs.Single(b => b.BlogId == id);
+                blog.Url = body.Url;
+                
                 var count = db.SaveChanges();
                 return new OkObjectResult(string.Format("{0} records saved to database", count));
             }
