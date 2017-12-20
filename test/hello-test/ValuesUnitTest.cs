@@ -7,16 +7,16 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.TestHost;
 
 using Newtonsoft.Json.Linq;
-using hello.Models;
+using hello;
 
 namespace hello_test
 {
-    public class ValuesControllerTest
+    public class ValuesUnitTest
     {
         private readonly HttpClient client;
         private readonly TestServer server;
 
-        public ValuesControllerTest() {
+        public ValuesUnitTest() {
             server = new TestServer(
                 new WebHostBuilder().UseStartup<Startup>()
             );
