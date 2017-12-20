@@ -11,7 +11,7 @@ namespace hello.Controllers
     {
         // GET api/blogs
         [HttpGet]
-        public IActionResult Get()
+        public IActionResult GetAll()
         {
             using (var db = new BloggingContext())
             {
@@ -21,6 +21,17 @@ namespace hello.Controllers
                     blogs.Add(blog);
                 }
                 return new OkObjectResult(blogs);
+            }
+        }
+
+        // GET api/blogs/1
+        [HttpGet("{id}")]
+        public IActionResult GetOne(int id)
+        {
+            using (var db = new BloggingContext())
+            {
+                var blog = db.Blogs.Single(b => b.BlogId == id);
+                return new OkObjectResult(blog);
             }
         }
 
