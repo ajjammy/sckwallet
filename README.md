@@ -1,6 +1,6 @@
 # sckwallet
 
-## Build -> Test -> Run
+## 1. Build -> Test -> Run
 * Build: build all projects in solution 
 
   `$ dotnet build`
@@ -14,12 +14,12 @@
 
 
 
-# Task list
+## 2. Task list
 
 - [ ] Not Complete
 - [/] Complete
 
-## hello and hello-test project
+### hello and hello-test project
 - [/] Create API Project
 - [/] Create Test Project
 - [/] Create Sulution and Add Reference Project
@@ -35,9 +35,9 @@
     - [ ] APIs Test
     - [ ] Controller Test
 
-## Design A-DAPT Blueprint Customer Invisible
+### Design A-DAPT Blueprint Customer Invisible
 
-## sckwallet.api and sckwallet.test project
+### sckwallet.api and sckwallet.test project
 - [ ] Create sckwallet.api Project connect to database use Sqlite
     - [ ] GET Balance
     - [ ] POST Topup
