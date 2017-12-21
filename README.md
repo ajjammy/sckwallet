@@ -1,13 +1,13 @@
 # sckwallet
 
 ## 1. Build -> Test -> Run
-* Build: build all projects in solution 
+* Build: Build all projects in solution 
 
   `$ dotnet build`
-* Test: run test project
+* Test: Run test project
   
   `$ dotnet test test/hello-test/hello-test.csproj`
-* Run: run api project
+* Run: Run api project
 
   `$ dotnet run --project src/hello/hello.csproj`
 
