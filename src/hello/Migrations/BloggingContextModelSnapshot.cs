@@ -45,7 +45,7 @@ namespace hello.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Post");
                 });
 
             modelBuilder.Entity("hello.Models.Post", b =>

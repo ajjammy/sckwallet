@@ -10,7 +10,7 @@ using System;
 namespace hello.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    [Migration("20171220054451_InitialCreate")]
+    [Migration("20171221060623_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,7 +46,7 @@ namespace hello.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Posts");
+                    b.ToTable("Post");
                 });
 
             modelBuilder.Entity("hello.Models.Post", b =>
