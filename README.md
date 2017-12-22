@@ -32,7 +32,7 @@
 - [ ] Create Test
     - [/] Unit Test Simple Method
     - [/] Unit Test Service Method (Use In Memory Database)
-    - [ ] APIs Test
+    - [/] APIs Integration Test
     - [ ] Controller Test
 
 ### Design A-DAPT Blueprint Customer Invisible
