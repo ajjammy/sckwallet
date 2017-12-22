@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using Xunit;
 using System.Text;
 using Newtonsoft.Json;
+using hello.Controllers;
 
 namespace hello_test
 {
@@ -17,7 +18,6 @@ namespace hello_test
         private readonly TestServer server;
         private readonly string _ContentType = "application/json";
         
-
         public BlogsIntegrationTest() {
             server = new TestServer(
                 new WebHostBuilder()

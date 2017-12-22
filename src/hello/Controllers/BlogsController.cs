@@ -33,7 +33,10 @@ namespace hello.Controllers
         [HttpPost]
 		public IActionResult PostOne([FromBody]Blog body)
 		{
+            if (!ModelState.IsValid) return BadRequest(ModelState); 
+
             _blogService.Add(body.Url);
+            
             return new OkObjectResult("saved to database");
         }
     }
